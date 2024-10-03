@@ -21,13 +21,13 @@ Google drive：https://drive.google.com/drive/folders/19oebxjm0MImcwCyp8crsg9qxx
 
 # 代码部分
 ## 1: 检查相机序号和配置文件是否对应  
+![Image](/image/9canInit.png "Optional title")
 ```bash
-![Image](/images/9canInit.png "Optional title")
 python lerobot/common/robot_devices/cameras/opencv.py --fps 30 --record-time-s 3
 ```
 ## 2: 检查遥操臂的关节范围是否正常 
-```bash
 ![Image](/image/10usbInit.png "Optional title")
+```bash
 python lerobot/scripts/control_robot.py teleoperate --robot-path lerobot/configs/robot/gello_ur5.yaml 
 ```
 
