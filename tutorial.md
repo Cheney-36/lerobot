@@ -53,7 +53,7 @@ DATA_DIR=data python lerobot/scripts/train.py \
   device=cuda \
   wandb.enable=true 
 ```
-## 5: 评估
+## 6: 评估
 ```bash
 python lerobot/scripts/control_robot.py record \
   --robot-path lerobot/configs/robot/gello_ur5.yaml \
@@ -67,7 +67,7 @@ python lerobot/scripts/control_robot.py record \
   --num-episodes 10 \
   -p outputs/train/act_ur5_dish/checkpoints/last/pretrained_model
 ```
-## 6: 自定义评估
+## 7: 自定义评估（有需求可以自己实现）
 ```bash
 python lerobot/scripts/control_robot.py eval \
   --robot-path lerobot/configs/robot/gello_ur5.yaml \
