@@ -1,23 +1,23 @@
-# 硬件部分
-## 1: Dynamixel
+# 硬件清单
+[Google drive]:(https://docs.google.com/spreadsheets/d/1t7Ry02J_dzc6oH8-CAuLcNe-Jdvoj7Wx/edit?usp=drive_link&ouid=101294868838182148795&rtpof=true&sd=true)
 ![Image](/image/1ur5List.png "Optional title")
 ![Image](/image/4material.png "Optional title")
 ![Image](/image/5Connectioninstructions.png "Optional title")
 ![Image](/image/6assemble.png "Optional title")
 
-技术文档：https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/
+## 1: Dynamixel资料
+[技术文档](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/)
 
-产品图纸：http://en.robotis.com/service/downloadpage.php?ca_id=70c0
+[产品图纸](http://en.robotis.com/service/downloadpage.php?ca_id=70c0)
 
-相关软件：http://en.robotis.com/service/downloadpage.php?ca_id=10
+[相关软件](http://en.robotis.com/service/downloadpage.php?ca_id=10)
 
-配件选择：http://en.robotis.com/service/compatibility_table.php?cate=dx
+[配件选择](http://en.robotis.com/service/compatibility_table.php?cate=dx)
 
-选配向导：http://en.robotis.com/service/selection_g
 
 ## 2: solidworks(2021)模型
 ![Image](/image/3model.png "Optional title")
-Google drive：https://drive.google.com/drive/folders/19oebxjm0MImcwCyp8crsg9qxxwVY44T8?usp=drive_link
+[Google drive](https://drive.google.com/drive/folders/19oebxjm0MImcwCyp8crsg9qxxwVY44T8?usp=drive_link)
 
 # 代码部分
 ## 1: 检查相机序号和配置文件是否对应  
