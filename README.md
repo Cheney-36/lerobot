@@ -98,6 +98,7 @@ pip install -e .
 you may need to install `cmake` and `build-essential` for building some of our dependencies.
 On linux: `sudo apt-get install cmake build-essential`
 
+
 For simulations, 🤗 LeRobot comes with gymnasium environments that can be installed as extras:
 - [aloha](https://github.com/huggingface/gym-aloha)
 - [xarm](https://github.com/huggingface/gym-xarm)
@@ -112,8 +113,14 @@ To use [Weights and Biases](https://docs.wandb.ai/quickstart) for experiment tra
 ```bash
 wandb login
 ```
-
 (note: you will also need to enable WandB in the configuration. See below.)
+
+## Building a custom robot
+
+If you want to use [Gello](https://wuphilipp.github.io/gello_site/) to build your own robot, please refer to this [tutorial](https://github.com/Cheney-36/lerobot/blob/main/tutorial.md)
+
+
+
 
 ## Walkthrough
 
