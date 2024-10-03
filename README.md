@@ -79,7 +79,7 @@
 
 Download our source code:
 ```bash
-git clone https://github.com/huggingface/lerobot.git
+git clone https://github.com/Cheney-36/lerobot.git
 cd lerobot
 ```
 
