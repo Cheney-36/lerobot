@@ -21,7 +21,7 @@ class URRobot():
 
             from lerobot.common.robot_devices.robots.pgi_tools import PGIGripper
             self.gripper = PGIGripper()
-            self.gripper.connect("/dev/ttyUSB0", 1, 115200)
+            self.gripper.connect("/dev/ttyUSB1", 1, 115200)
             self.gripper.init_gripper()
 
             print("gripper connected")

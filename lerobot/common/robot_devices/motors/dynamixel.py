@@ -647,13 +647,14 @@ class DynamixelMotorsBus:
         np.set_printoptions(suppress=True)
         if data_name in CALIBRATION_REQUIRED and self.calibration is not None:
             values = self.apply_calibration(values, motor_names)
-
+             
             # We expect our motors to stay in a nominal range of [-180, 180] degrees
             # which corresponds to a half turn rotation.
             # However, some motors can turn a bit more, hence we extend the nominal range to [-270, 270]
             # which is less than a full 360 degree rotation.
             #print("3:",values)
             if not np.all((values > -270) & (values < 270)):
+                print("values: ",values)   
                 raise ValueError(
                     f"Wrong motor position range detected. "
                     f"Expected to be in [-270, +270] but in [{values.min()}, {values.max()}]. "

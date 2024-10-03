@@ -3,7 +3,7 @@ calibration_path: .cache/calibration/gello_ur5.pkl
 leader_arms:
   main:
     _target_: lerobot.common.robot_devices.motors.dynamixel.DynamixelMotorsBus
-    port: /dev/ttyUSB1 
+    port: /dev/ttyUSB0 
     motors:
       # name: (index, model)
       shoulder_pan: [1, "xl330-m288"]
@@ -29,19 +29,19 @@ follower_arms: #ur5
 cameras:
   head:
     _target_: lerobot.common.robot_devices.cameras.opencv.OpenCVCamera
-    camera_index: 2
+    camera_index: 7
     fps: 30
     width: 640
     height: 480
-  # flan:
-  #   _target_: lerobot.common.robot_devices.cameras.opencv.OpenCVCamera
-  #   camera_index: 4
-  #   fps: 30
-  #   width: 640
-  #   height: 480
+  flan:
+    _target_: lerobot.common.robot_devices.cameras.opencv.OpenCVCamera
+    camera_index: 4
+    fps: 30
+    width: 640
+    height: 480
   right:
     _target_: lerobot.common.robot_devices.cameras.opencv.OpenCVCamera
-    camera_index: 0
+    camera_index: 6
     fps: 30
     width: 640
     height: 480

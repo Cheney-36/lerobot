@@ -342,7 +342,7 @@ def record(
 
     # Logic to resume data recording
     rec_info_path = episodes_dir / "data_recording_info.json"
-    if rec_info_path.exists():
+    if rec_info_path.exists() and policy is None:
         with open(rec_info_path) as f:
             rec_info = json.load(f)
         episode_index = rec_info["last_episode_index"] + 1
@@ -736,12 +736,9 @@ def eval(robot: Robot,
     inference_time_s = 60
     fps = 30
 
-    # ckpt_path = checkpoints #"outputs/train/act_koch_test/checkpoints/last/pretrained_model"
-    # policy = ACTPolicy.from_pretrained(ckpt_path)
+    # policy = ACTPolicy.from_pretrained("outputs/train/act_koch_test/checkpoints/last/pretrained_model")
     # policy.to(device)
 
-    # Load policy
-    # Check device is available
     device = get_safe_torch_device(hydra_cfg.device, log=True)
 
     policy.eval()
@@ -913,11 +910,20 @@ if __name__ == "__main__":
     parser_replay.add_argument("--episode", type=int, default=0, help="Index of the episode to replay.")
 
     parser_eval = subparsers.add_parser("eval", parents=[base_parser])
-    parser_eval.add_argument("--checkpoints", type=str,
-        #default="outputs/train/act_ur5_test/checkpoints/last/pretrained_model",
-        help="default=outputs/train/act_ur5_test/checkpoints/last/pretrained_model",
+    parser_eval.add_argument(
+        "-p",
+        "--pretrained-policy-name-or-path",
+        type=str,
+        help=(
+            "default=outputs/train/act_ur5_test/checkpoints/last/pretrained_model"
+        ),
     )
-
+    parser_eval.add_argument(
+        "--policy-overrides",
+        type=str,
+        nargs="*",
+        help="Any key=value arguments to override config values (use dots for.nested=overrides)",
+    )
 
     args = parser.parse_args()
 
