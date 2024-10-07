@@ -42,7 +42,7 @@ python lerobot/scripts/control_robot.py record --robot-path lerobot/configs/robo
 python lerobot/scripts/visualize_dataset_html.py   --root data   --repo-id cheney/dish
 ```
 
-## 5: 训练
+## 5: 训练模型
 ```bash
 DATA_DIR=data python lerobot/scripts/train.py \
   dataset_repo_id={$HF_USER}/ur5_test\
@@ -53,7 +53,7 @@ DATA_DIR=data python lerobot/scripts/train.py \
   device=cuda \
   wandb.enable=true 
 ```
-## 6: 评估
+## 6: 模型推理
 ```bash
 python lerobot/scripts/control_robot.py record \
   --robot-path lerobot/configs/robot/gello_ur5.yaml \
